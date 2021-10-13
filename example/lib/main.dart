@@ -12,8 +12,9 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+import 'package:example/ui/router/app_router.dart';
+import 'package:example/ui/res/app_strings.dart';
 import 'package:flutter/material.dart';
-import 'package:surf_util/surf_util.dart';
 
 void main() => runApp(const MyApp());
 
@@ -23,50 +24,13 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'DisableOverscroll Example',
+      title: AppStrings.mainAppBarTitle,
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const RefresherPage(),
+      initialRoute: AppRouter.root,
+      onGenerateRoute: (routeSettings) =>
+          AppRouter.routes[routeSettings.name]!(routeSettings.arguments),
     );
   }
 }
-
-class RefresherPage extends StatefulWidget {
-  const RefresherPage({Key? key}) : super(key: key);
-
-  @override
-  _RefresherPageState createState() => _RefresherPageState();
-}
-
-class _RefresherPageState extends State<RefresherPage> {
-  @override
-  Widget build(BuildContext context) {
-    return DefaultTabController(
-      length: 2,
-      child: Scaffold(
-        appBar: AppBar(
-          title: const Text('DisableOverscroll'),
-        ),
-        body: DisableOverscroll(
-          child: SingleChildScrollView(
-            child: Column(
-              children: Colors.primaries
-                  .map(
-                    (color) => Container(
-                      height: 200,
-                      color: color,
-                    ),
-                  )
-                  .toList(),
-            ),
-          ),
-        ),
-      ),
-    );
-  }
-}
-
-const white = Color(0xFFFFFFFF);
-const red = Color(0xFFFF0000);
-const blue = Color(0xFF0000FF);
