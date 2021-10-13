@@ -12,17 +12,8 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-import 'package:flutter_test/flutter_test.dart';
-import 'package:surf_util/src/enum/bitmask.dart';
-import 'package:surf_util/src/enum/int_extension.dart';
+import 'package:surf_util/src/bitmask/bitmask.dart';
 
-class TestBitmask extends Bitmask {
-  const TestBitmask(int value) : super(value);
-}
-
-void main() {
-  test('isOn returns true if checked value contains provided mask', () {
-    expect(15.isOn(const TestBitmask(0x0001)), isTrue);
-    expect(15.isOn(const TestBitmask(0x0100)), isFalse);
-  });
+extension BitmaskIntExtension on int {
+  bool isOn(Bitmask mask) => mask.isOn(this);
 }

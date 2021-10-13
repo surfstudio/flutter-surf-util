@@ -38,7 +38,7 @@
 /// }
 /// ```
 abstract class Enum<T> {
-  const Enum(this.value);
-
   final T value;
+
+  const Enum(this.value);
 }

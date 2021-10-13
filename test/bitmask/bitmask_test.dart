@@ -13,7 +13,7 @@
 // limitations under the License.
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:surf_util/src/enum/bitmask.dart';
+import 'package:surf_util/src/bitmask/bitmask.dart';
 
 class TestBitmask extends Bitmask {
   const TestBitmask(int value) : super(value);

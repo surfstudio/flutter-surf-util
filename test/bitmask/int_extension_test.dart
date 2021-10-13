@@ -12,8 +12,17 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-/// Interface for transform a data object from one format to another
-// ignore: one_member_abstracts
-abstract class Transformable<T> {
-  T transform();
+import 'package:flutter_test/flutter_test.dart';
+import 'package:surf_util/src/bitmask/bitmask.dart';
+import 'package:surf_util/src/bitmask/int_extension.dart';
+
+class TestBitmask extends Bitmask {
+  const TestBitmask(int value) : super(value);
+}
+
+void main() {
+  test('isOn returns true if checked value contains provided mask', () {
+    expect(15.isOn(const TestBitmask(0x0001)), isTrue);
+    expect(15.isOn(const TestBitmask(0x0100)), isFalse);
+  });
 }

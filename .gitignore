@@ -1,0 +1,93 @@
+# Miscellaneous
+*.class
+*.log
+*.pyc
+*.swp
+.DS_Store
+.atom/
+.buildlog/
+.history
+.svn/
+
+# IntelliJ related
+*.iml
+*.ipr
+*.iws
+.idea/
+
+# The .vscode folder contains launch configuration and tasks you configure in
+# VS Code which you may wish to be included in version control, so this line
+# is commented out by default.
+#.vscode/
+
+# Flutter/Dart/Pub related
+**/doc/api/
+**/ios/Flutter/.last_build_id
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+.packages
+.pub-cache/
+.pub/
+/build/
+
+# Web related
+lib/generated_plugin_registrant.dart
+
+# Symbolication related
+app.*.symbols
+
+# Obfuscation related
+app.*.map.json
+
+# Android Studio will place build artifacts here
+/android/app/debug
+/android/app/profile
+/android/app/release
+
+# Fvm
+.fvm/**
+.fvm/flutter_sdk
+pubspec.lock
+.vscode/launch.json
+ios/Podfile.lock
+ios/build/Pods.build/Release-iphonesimulator/DKImagePickerController-DKImagePickerController.build/dgph
+ios/build/Pods.build/Release-iphonesimulator/DKImagePickerController.build/dgph
+ios/build/Pods.build/Release-iphonesimulator/DKPhotoGallery-DKPhotoGallery.build/dgph
+ios/build/Pods.build/Release-iphonesimulator/DKPhotoGallery.build/dgph
+ios/build/Pods.build/Release-iphonesimulator/file_picker.build/dgph
+ios/build/Pods.build/Release-iphonesimulator/Firebase.build/dgph
+ios/build/Pods.build/Release-iphonesimulator/firebase_core.build/dgph
+ios/build/Pods.build/Release-iphonesimulator/firebase_crashlytics.build/dgph
+ios/build/Pods.build/Release-iphonesimulator/firebase_messaging.build/dgph
+ios/build/Pods.build/Release-iphonesimulator/FirebaseAnalytics.build/dgph
+ios/build/Pods.build/Release-iphonesimulator/FirebaseCore.build/dgph
+ios/build/Pods.build/Release-iphonesimulator/FirebaseCoreDiagnostics.build/dgph
+ios/build/Pods.build/Release-iphonesimulator/FirebaseCrashlytics.build/dgph
+ios/build/Pods.build/Release-iphonesimulator/FirebaseInstallations.build/dgph
+ios/build/Pods.build/Release-iphonesimulator/FirebaseMessaging.build/dgph
+ios/build/Pods.build/Release-iphonesimulator/Flutter.build/dgph
+ios/build/Pods.build/Release-iphonesimulator/flutter_local_notifications.build/dgph
+ios/build/Pods.build/Release-iphonesimulator/GoogleAppMeasurement.build/dgph
+ios/build/Pods.build/Release-iphonesimulator/GoogleDataTransport.build/dgph
+ios/build/Pods.build/Release-iphonesimulator/GoogleUtilities.build/dgph
+ios/build/Pods.build/Release-iphonesimulator/image_picker.build/dgph
+ios/build/Pods.build/Release-iphonesimulator/libwebp.build/dgph
+ios/build/Pods.build/Release-iphonesimulator/nanopb.build/dgph
+ios/build/Pods.build/Release-iphonesimulator/package_info_plus.build/dgph
+ios/build/Pods.build/Release-iphonesimulator/path_provider.build/dgph
+ios/build/Pods.build/Release-iphonesimulator/Pods-Runner.build/dgph
+ios/build/Pods.build/Release-iphonesimulator/PromisesObjC.build/dgph
+ios/build/Pods.build/Release-iphonesimulator/push_notification.build/dgph
+ios/build/Pods.build/Release-iphonesimulator/SDWebImage.build/dgph
+ios/build/Pods.build/Release-iphonesimulator/shared_preferences.build/dgph
+ios/build/Pods.build/Release-iphonesimulator/SwiftyGif.build/dgph
+ios/build/Pods.build/Release-iphonesimulator/video_thumbnail.build/dgph
+ios/build/Runner.build/Release-iphoneos/Runner.build/dgph
+ios/Runner/RunnerDebug.entitlements
+ios/Runner 2021-09-22 23-05-05/DistributionSummary.plist
+ios/Runner 2021-09-22 23-05-05/ExportOptions.plist
+ios/Runner 2021-09-22 23-05-05/mars_dsn.ipa
+ios/Runner 2021-09-23 10-31-52/DistributionSummary.plist
+ios/Runner 2021-09-23 10-31-52/ExportOptions.plist
+ios/Runner 2021-09-23 10-31-52/mars_dsn.ipa
