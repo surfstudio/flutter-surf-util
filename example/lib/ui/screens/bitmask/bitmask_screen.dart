@@ -67,14 +67,40 @@ class _BitmaskScreenState extends State<BitmaskScreen> {
                 .toList(),
           ),
           const SizedBox(height: 40),
-          Text(
-            'mask: $_mask',
-            style: Theme.of(context).textTheme.headline4,
+          RichText(
+            text: TextSpan(
+              children: <TextSpan>[
+                TextSpan(
+                  text: 'mask: ',
+                  style: Theme.of(context)
+                      .textTheme
+                      .headline5
+                      ?.copyWith(color: Theme.of(context).primaryColor),
+                ),
+                TextSpan(
+                  text: '$_mask',
+                  style: Theme.of(context).textTheme.headline4,
+                ),
+              ],
+            ),
           ),
           const SizedBox(height: 40),
-          Text(
-            '0000 ${_binaryCode.reversed.toList().join()}',
-            style: Theme.of(context).textTheme.headline4,
+          RichText(
+            text: TextSpan(
+              children: <TextSpan>[
+                TextSpan(
+                  text: 'binary: ',
+                  style: Theme.of(context)
+                      .textTheme
+                      .headline5
+                      ?.copyWith(color: Theme.of(context).primaryColor),
+                ),
+                TextSpan(
+                  text: '0000 ${_binaryCode.reversed.toList().join()}',
+                  style: Theme.of(context).textTheme.headline4,
+                ),
+              ],
+            ),
           ),
         ],
       ),
