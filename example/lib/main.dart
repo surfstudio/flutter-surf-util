@@ -12,8 +12,8 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-import 'package:example/ui/router/app_router.dart';
 import 'package:example/ui/res/app_strings.dart';
+import 'package:example/ui/router/app_router.dart';
 import 'package:flutter/material.dart';
 
 void main() => runApp(const MyApp());

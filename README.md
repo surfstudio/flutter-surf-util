@@ -15,10 +15,9 @@ A library with set of common classes and utilities used in different modules
 
 ## Main classes
 
-1. [Bitmask](/lib/src/enum/bitmask.dart) - A generic implementation of the Bitmask type
+1. [Bitmask](/lib/src/bitmask/bitmask.dart) - A generic implementation of the Bitmask type
 2. [Enum](/lib/src/enum/enum.dart) - Java-like enum
-3. [Transformable](/lib/src/transformable.dart) - Base class for transformation
-4. [DisableOverscroll](/lib/src/ui/widget/disable_overscroll_widget.dart) - Prevent glowing when scrolling over the edge
+3. [DisableOverscroll](/lib/src/ui/widget/disable_overscroll_widget.dart) - Prevent glowing when scrolling over the edge
 
 ## Installation
 

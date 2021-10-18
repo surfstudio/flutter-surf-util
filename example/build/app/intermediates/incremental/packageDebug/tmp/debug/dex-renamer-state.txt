@@ -1,4 +1,4 @@
-#Wed Oct 13 21:49:18 MSK 2021
+#Sun Oct 17 23:59:23 MSK 2021
 base.0=/Users/sugina/IdeaProjects/flutter-surf-util/example/build/app/intermediates/transforms/dexMerger/debug/0
 renamed.0=classes.dex
 path.0=classes.dex

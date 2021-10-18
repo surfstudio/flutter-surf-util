@@ -2,7 +2,7 @@ import 'package:example/ui/res/app_strings.dart';
 import 'package:flutter/material.dart';
 import 'package:surf_util/surf_util.dart';
 
-/// Пример работы DisableOverscroll
+/// DisableOverscroll sample
 class OverscrollScreen extends StatelessWidget {
   const OverscrollScreen({Key? key}) : super(key: key);
 
@@ -39,7 +39,7 @@ class OverscrollScreen extends StatelessWidget {
   }
 }
 
-/// Контент таб 1 со скрытием свечения по краям
+/// Content tab 1 with border glow hiding
 class _ContentTabOneWidget extends StatelessWidget {
   const _ContentTabOneWidget({Key? key}) : super(key: key);
 
@@ -62,7 +62,7 @@ class _ContentTabOneWidget extends StatelessWidget {
   }
 }
 
-/// Контент таб 2 - стандартное поведение SingleChildScrollView
+/// Content tab 2 with standard behavior SingleChildScrollView
 class _ContentTabTwoWidget extends StatelessWidget {
   const _ContentTabTwoWidget({Key? key}) : super(key: key);
 
@@ -81,10 +81,4 @@ class _ContentTabTwoWidget extends StatelessWidget {
       ),
     );
   }
-}
-
-/// Для скрытия свечения используйте расширение для виджета или
-/// оберните SingleChildScrollView в DisableOverscroll
-extension on SingleChildScrollView {
-  Widget disableOverscroll() => DisableOverscroll(child: this);
 }

@@ -1,8 +1,8 @@
-import 'package:example/ui/router/app_router.dart';
 import 'package:example/ui/res/app_strings.dart';
+import 'package:example/ui/router/app_router.dart';
 import 'package:flutter/material.dart';
 
-/// Экран с навигацией
+/// Navigation screen
 class MainScreen extends StatelessWidget {
   const MainScreen({Key? key}) : super(key: key);
 
