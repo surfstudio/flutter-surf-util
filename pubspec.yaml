@@ -1,8 +1,8 @@
 name: surf_util
 version: 1.0.1
-description: A library with set of common classes and utilities.
-repository: "https://github.com/surfstudio/SurfGear/tree/main/packages/surf_util"
-issue_tracker: "https://github.com/surfstudio/SurfGear/issues"
+description: A flutter library with list of helpful classes and utilities for everyday usage.
+repository: "https://github.com/surfstudio/flutter-surf-util"
+issue_tracker: "https://github.com/surfstudio/flutter-surf-util/issues"
 
 dependencies:
   flutter:
