@@ -16,7 +16,32 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:surf_util/src/bitmask/bitmask.dart';
 
 class TestBitmask extends Bitmask {
-  const TestBitmask(int value) : super(value);
+  static const TestBitmask zeroBit = TestBitmask._(
+    1,
+    description: 'zero bit',
+  );
+
+  static const TestBitmask firstBit = TestBitmask._(
+    2,
+    description: 'the first bit',
+  );
+
+  static const TestBitmask secondBit = TestBitmask._(
+    4,
+    description: 'the second bit',
+  );
+
+  static const TestBitmask thirdBit = TestBitmask._(
+    8,
+    description: 'the third bit',
+  );
+
+  final String description;
+
+  const TestBitmask._(
+    int value, {
+    required this.description,
+  }) : super(value);
 }
 
 /// binary representation
@@ -24,21 +49,21 @@ class TestBitmask extends Bitmask {
 
 Map<int, List<TestBitmask>> testedData = {
   0: [],
-  1: const [TestBitmask(1)],
-  2: const [TestBitmask(2)],
-  3: const [TestBitmask(1), TestBitmask(2)],
-  4: const [TestBitmask(4)],
-  5: const [TestBitmask(1), TestBitmask(4)],
-  6: const [TestBitmask(2), TestBitmask(4)],
-  7: const [TestBitmask(1), TestBitmask(2), TestBitmask(4)],
-  8: const [TestBitmask(8)],
-  9: const [TestBitmask(1), TestBitmask(8)],
-  10: const [TestBitmask(2), TestBitmask(8)],
-  11: const [TestBitmask(1), TestBitmask(2), TestBitmask(8)],
-  12: const [TestBitmask(4), TestBitmask(8)],
-  13: const [TestBitmask(1), TestBitmask(4), TestBitmask(8)],
-  14: const [TestBitmask(2), TestBitmask(4), TestBitmask(8)],
-  15: const [TestBitmask(1), TestBitmask(2), TestBitmask(4), TestBitmask(8)],
+  1: const [TestBitmask.zeroBit],
+  2: const [TestBitmask.firstBit],
+  3: const [TestBitmask.zeroBit, TestBitmask.firstBit],
+  4: const [TestBitmask.secondBit],
+  5: const [TestBitmask.zeroBit, TestBitmask.secondBit],
+  6: const [TestBitmask.firstBit, TestBitmask.secondBit],
+  7: const [TestBitmask.zeroBit, TestBitmask.firstBit, TestBitmask.secondBit],
+  8: const [TestBitmask.thirdBit],
+  9: const [TestBitmask.zeroBit, TestBitmask.thirdBit],
+  10: const [TestBitmask.firstBit, TestBitmask.thirdBit],
+  11: const [TestBitmask.zeroBit, TestBitmask.firstBit, TestBitmask.thirdBit],
+  12: const [TestBitmask.secondBit, TestBitmask.thirdBit],
+  13: const [TestBitmask.zeroBit, TestBitmask.secondBit, TestBitmask.thirdBit],
+  14: const [TestBitmask.firstBit, TestBitmask.secondBit, TestBitmask.thirdBit],
+  15: const [TestBitmask.zeroBit, TestBitmask.firstBit, TestBitmask.thirdBit, TestBitmask.thirdBit],
 };
 
 void main() {
@@ -193,8 +218,8 @@ void main() {
   );
 
   test('isOn returns true if checked value contains provided mask', () {
-    expect(const TestBitmask(1).isOn(1), isTrue);
-    expect(const TestBitmask(8).isOn(15), isTrue);
-    expect(const TestBitmask(2).isOn(8), isFalse);
+    expect(TestBitmask.zeroBit.isOn(1), isTrue);
+    expect(TestBitmask.thirdBit.isOn(15), isTrue);
+    expect(TestBitmask.firstBit.isOn(8), isFalse);
   });
 }
