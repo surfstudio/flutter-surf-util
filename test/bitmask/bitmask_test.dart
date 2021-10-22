@@ -16,32 +16,15 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:surf_util/src/bitmask/bitmask.dart';
 
 class TestBitmask extends Bitmask {
-  static const TestBitmask zeroBit = TestBitmask._(
-    1,
-    description: 'zero bit',
-  );
+  static const TestBitmask zeroBit = TestBitmask._(1);
 
-  static const TestBitmask firstBit = TestBitmask._(
-    2,
-    description: 'the first bit',
-  );
+  static const TestBitmask firstBit = TestBitmask._(2);
 
-  static const TestBitmask secondBit = TestBitmask._(
-    4,
-    description: 'the second bit',
-  );
+  static const TestBitmask secondBit = TestBitmask._(4);
 
-  static const TestBitmask thirdBit = TestBitmask._(
-    8,
-    description: 'the third bit',
-  );
+  static const TestBitmask thirdBit = TestBitmask._(8);
 
-  final String description;
-
-  const TestBitmask._(
-    int value, {
-    required this.description,
-  }) : super(value);
+  const TestBitmask._(int value) : super(value);
 }
 
 /// binary representation
