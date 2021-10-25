@@ -17,12 +17,23 @@ import 'package:surf_util/src/bitmask/bitmask.dart';
 import 'package:surf_util/src/bitmask/int_extension.dart';
 
 class TestBitmask extends Bitmask {
-  const TestBitmask(int value) : super(value);
+  static const TestBitmask zeroBit = TestBitmask._(1);
+
+  static const TestBitmask firstBit = TestBitmask._(2);
+
+  static const TestBitmask secondBit = TestBitmask._(4);
+
+  static const TestBitmask thirdBit = TestBitmask._(8);
+
+  const TestBitmask._(int value) : super(value);
 }
 
 void main() {
   test('isOn returns true if checked value contains provided mask', () {
-    expect(15.isOn(const TestBitmask(0x0001)), isTrue);
-    expect(15.isOn(const TestBitmask(0x0100)), isFalse);
+    expect(0.isOn(TestBitmask.zeroBit), isFalse); // 0000 0000
+    expect(5.isOn(TestBitmask.firstBit), isFalse); // 0000 0101
+    expect(5.isOn(TestBitmask.secondBit), isTrue); // 0000 0101
+    expect(8.isOn(TestBitmask.secondBit), isFalse); // 0000 1000
+    expect(15.isOn(TestBitmask.secondBit), isTrue); // 0000 1111
   });
 }
