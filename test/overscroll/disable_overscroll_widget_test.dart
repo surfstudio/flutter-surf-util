@@ -3,50 +3,70 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:surf_util/src/ui/widget/disable_overscroll_widget.dart';
 
 void main() {
-  testWidgets(
-      'тестирование виджета на отсутствие GlowingOverscrollIndicator',
-          (tester) async {
-        await tester.pumpWidget(
-          MaterialApp(
-            home: Scaffold(
-              body: DisableOverscroll(
-                child: SingleChildScrollView(
-                  child: Column(
-                    children: Colors.primaries
-                        .map(
-                          (color) =>
-                          Container(
-                            height: 100,
-                            color: color,
-                          ),
-                    )
-                        .toList(),
-                  ),
-                ),
-              ),
+  late String _overscrollNotification;
+
+  const startOverscroll = 'Start showing an overscroll indication';
+  const emptyNotification = '';
+
+  final app = MaterialApp(
+    home: Scaffold(
+      body: NotificationListener<OverscrollIndicatorNotification>(
+        onNotification: (notification) {
+          if (notification is OverscrollIndicatorNotification) {
+            _overscrollNotification = startOverscroll;
+          } else {
+            _overscrollNotification = emptyNotification;
+          }
+
+          return false;
+        },
+        child: DisableOverscroll(
+          child: SingleChildScrollView(
+            child: Column(
+              children: Colors.primaries
+                  .map(
+                    (color) => Container(
+                      height: 100,
+                      color: color,
+                    ),
+                  )
+                  .toList(),
             ),
           ),
-        );
+        ),
+      ),
+    ),
+  );
 
-        final singleChildScrollView = find.byType(SingleChildScrollView);
-        expect(singleChildScrollView, findsOneWidget);
+  setUp(() {
+    _overscrollNotification = emptyNotification;
+  });
 
-        await tester.drag(singleChildScrollView, const Offset(0, -1000));
-        await tester.pump();
+  testWidgets(
+    'Start showing an overscroll indication',
+    (tester) async {
+      await tester.pumpWidget(app);
 
-        final glowingOverscrollIndicator = find.byWidgetPredicate((widget) =>
-        widget is GlowingOverscrollIndicator);
-        expect(glowingOverscrollIndicator, findsOneWidget);
+      final singleChildScrollView = find.byType(SingleChildScrollView);
+      expect(singleChildScrollView, findsOneWidget);
 
+      await tester.drag(singleChildScrollView, const Offset(0, 100));
+      await tester.pump();
+      expect(_overscrollNotification, startOverscroll);
+    },
+  );
 
-        final scrollConfiguration = find.byWidgetPredicate((widget) =>
-        widget is ScrollConfiguration);
-        expect(scrollConfiguration, findsOneWidget);
+  testWidgets(
+    'There are no notifications',
+    (tester) async {
+      await tester.pumpWidget(app);
 
-        // expect(glowingOverscrollIndicator, findsNothing);
-      },
+      final singleChildScrollView = find.byType(SingleChildScrollView);
+      expect(singleChildScrollView, findsOneWidget);
 
-
-
+      await tester.drag(singleChildScrollView, const Offset(0, -200));
+      await tester.pump();
+      expect(_overscrollNotification, emptyNotification);
+    },
   );
 }
