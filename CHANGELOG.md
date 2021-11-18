@@ -1,10 +1,10 @@
 # Changelog
 
-## 1.0.1 - 2021-05-30
+## 1.0.1
 
 * Stable release
 
-## 1.0.0-dev.2 - 2021-05-25
+## 1.0.0-dev.2
 
 * Apply new lint rules.
 

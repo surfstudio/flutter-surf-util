@@ -6,7 +6,7 @@ import 'package:example/ui/screens/main/main_screen_route.dart';
 import 'package:example/ui/screens/overscroll/overscroll_screen_route.dart';
 import 'package:flutter/material.dart';
 
-/// основные маршруты приложения
+/// Main routes of the application.
 class AppRouter {
   static const root = '/';
   static const overscroll = '/overscroll';

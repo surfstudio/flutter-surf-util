@@ -27,6 +27,10 @@ class TestBitmask extends Bitmask {
   const TestBitmask._(int value) : super(value);
 }
 
+class TestBitmaskNotConst extends Bitmask {
+  TestBitmaskNotConst(int value) : super(value);
+}
+
 /// binary representation
 /// 0000 0101 -> 5
 
@@ -46,7 +50,12 @@ Map<int, List<TestBitmask>> testedData = {
   12: const [TestBitmask.secondBit, TestBitmask.thirdBit],
   13: const [TestBitmask.zeroBit, TestBitmask.secondBit, TestBitmask.thirdBit],
   14: const [TestBitmask.firstBit, TestBitmask.secondBit, TestBitmask.thirdBit],
-  15: const [TestBitmask.zeroBit, TestBitmask.firstBit, TestBitmask.thirdBit, TestBitmask.thirdBit],
+  15: const [
+    TestBitmask.zeroBit,
+    TestBitmask.firstBit,
+    TestBitmask.thirdBit,
+    TestBitmask.thirdBit,
+  ],
 };
 
 void main() {
@@ -197,6 +206,16 @@ void main() {
         Bitmask.getMask(testedData.entries.elementAt(14).value),
         equals(testedData.entries.elementAt(14).key),
       );
+    },
+  );
+
+  test(
+    'When create an instance of the TestBitmask with incorrect value,'
+        ' it should be thrown AssertionError',
+    () {
+
+      expect(() => TestBitmaskNotConst(16), returnsNormally);
+      expect(() => TestBitmaskNotConst(9), throwsAssertionError);
     },
   );
 
