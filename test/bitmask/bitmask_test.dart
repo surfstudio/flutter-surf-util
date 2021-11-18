@@ -46,7 +46,12 @@ Map<int, List<TestBitmask>> testedData = {
   12: const [TestBitmask.secondBit, TestBitmask.thirdBit],
   13: const [TestBitmask.zeroBit, TestBitmask.secondBit, TestBitmask.thirdBit],
   14: const [TestBitmask.firstBit, TestBitmask.secondBit, TestBitmask.thirdBit],
-  15: const [TestBitmask.zeroBit, TestBitmask.firstBit, TestBitmask.thirdBit, TestBitmask.thirdBit],
+  15: const [
+    TestBitmask.zeroBit,
+    TestBitmask.firstBit,
+    TestBitmask.thirdBit,
+    TestBitmask.thirdBit,
+  ],
 };
 
 void main() {
