@@ -211,9 +211,8 @@ void main() {
 
   test(
     'When create an instance of the TestBitmask with incorrect value,'
-        ' it should be thrown AssertionError',
+    ' it should be thrown AssertionError',
     () {
-
       expect(() => TestBitmaskNotConst(16), returnsNormally);
       expect(() => TestBitmaskNotConst(9), throwsAssertionError);
     },
