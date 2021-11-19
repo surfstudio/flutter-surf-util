@@ -10,16 +10,16 @@ class BitmaskScreen extends StatefulWidget {
 }
 
 class _BitmaskScreenState extends State<BitmaskScreen> {
-  /// Settings list
+  /// Settings list.
   final _settings = SettingsBitmask._registered;
 
-  /// Start code value
+  /// Start code value.
   final _binaryCode = <int>[0, 0, 0, 0];
 
-  /// Start mask value
+  /// Start mask value.
   var _mask = 0;
 
-  /// List with mask value switched on parameters
+  /// List with mask value switched on parameters.
   late List<SettingsBitmask> _currentList;
 
   @override
@@ -144,7 +144,7 @@ class SettingsBitmask extends Bitmask {
     required this.description,
   }) : super(value);
 
-  /// Returns list with switched on parameters
+  /// Returns list with switched on parameters.
   static List<SettingsBitmask> getList(int value) {
     return _registered.where((parameter) => parameter.isOn(value)).toList();
   }

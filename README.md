@@ -37,22 +37,56 @@ dependencies:
 
 ## Example
 
+### DisableOverscroll
+
 ```dart
 DisableOverscroll(
- child: SingleChildScrollView(
-  child: Column(
-   children: Colors.primaries
-          .map(
-            (color) => Container(
-              height: 200,
-              color: color,
-            ),
-          )
-          .toList(),
-    ),
+ child: ListView(
+     ...
   ),
 ),
 ```
+
+### Bitmask
+```dart
+class ExampleBitmask extends Bitmask {
+  const ExampleBitmask zeroBit = ExampleBitmask._(1);
+
+  const ExampleBitmask firstBit = ExampleBitmask._(2);
+
+  const ExampleBitmask._(int value) : super(value);
+
+  static List<ExampleBitmask> getList() {
+    return [zeroBit, firstBit];
+  }
+}
+final listBitmask = ExampleBitmask.getList();
+
+final mask = Bitmask.getMask(listBitmask);
+
+bool isOn = Bitmask.isOn(listBitmask.first);
+```
+
+### Enum
+```dart
+ class TransactionType extends Enum<String> {
+   const TransactionType(String val) : super(val);
+
+   static const TransactionType IN = TransactionType('in');
+   static const TransactionType OUT = TransactionType('out');
+
+   static TransactionType byValue(String value) {
+     switch (value) {
+       case 'in':
+         return IN;
+       case 'out':
+         return OUT;
+       default:
+         return OUT;
+     }
+   }
+ }
+ ```
 
 ## Changelog
 
