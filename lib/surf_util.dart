@@ -12,8 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-export 'package:surf_util/src/enum/bitmask.dart';
+export 'package:surf_util/src/bitmask/bitmask.dart';
+export 'package:surf_util/src/bitmask/int_extension.dart';
 export 'package:surf_util/src/enum/enum.dart';
-export 'package:surf_util/src/enum/int_extension.dart';
-export 'package:surf_util/src/transformable.dart';
 export 'package:surf_util/src/ui/widget/disable_overscroll_widget.dart';

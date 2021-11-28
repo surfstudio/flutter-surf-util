@@ -15,10 +15,14 @@ A library with set of common classes and utilities used in different modules
 
 ## Main classes
 
-1. [Bitmask](/lib/src/enum/bitmask.dart) - A generic implementation of the Bitmask type
+1. [Bitmask](/lib/src/bitmask/bitmask.dart) - A generic implementation of the Bitmask type
+
+![Bitmask](docs/images/mask.gif)
+
 2. [Enum](/lib/src/enum/enum.dart) - Java-like enum
-3. [Transformable](/lib/src/transformable.dart) - Base class for transformation
-4. [DisableOverscroll](/lib/src/ui/widget/disable_overscroll_widget.dart) - Prevent glowing when scrolling over the edge
+3. [DisableOverscroll](/lib/src/ui/widget/disable_overscroll_widget.dart) - Prevent glowing when scrolling over the edge
+
+![Bitmask](docs/images/overscroll.gif)
 
 ## Installation
 
@@ -41,13 +45,15 @@ For issues, file directly in the Issues section.
 
 ## Contribute
 
-If you would like to contribute to the package (e.g. by improving the documentation, solving a bug or adding a cool new feature), please review our [contribution guide](../../CONTRIBUTING.md) first and send us your pull request.
+If you would like to contribute to the package (e.g. by improving the documentation, solving a bug or adding a cool new
+feature), please review our [contribution guide](CONTRIBUTING.md) first and send us your pull request.
 
 Your PRs are always welcome.
 
 ## How to reach us
 
-Please feel free to ask any questions about this package. Join our community chat on Telegram. We speak English and Russian.
+Please feel free to ask any questions about this package. Join our community chat on Telegram. We speak English and
+Russian.
 
 [![Telegram](https://img.shields.io/badge/chat-on%20Telegram-blue.svg)](https://t.me/SurfGear)
 
