@@ -22,11 +22,11 @@ abstract class Bitmask extends Enum<int> {
       : assert(value > 0 && (value & (value - 1) == 0)),
         super(value);
 
-  /// Returns mask value on value list
+  /// Returns mask value on value list.
   static int getMask(Iterable<Bitmask> list) =>
       list.fold(0, (value, element) => value | element.value);
 
-  /// Checks flag activity
+  /// Checks flag activity.
   bool isOn(int mask) {
     return (mask & value) != 0;
   }

@@ -2,7 +2,7 @@ import 'package:example/ui/res/app_strings.dart';
 import 'package:example/ui/router/app_router.dart';
 import 'package:flutter/material.dart';
 
-/// Navigation screen
+/// Navigation screen.
 class MainScreen extends StatelessWidget {
   const MainScreen({Key? key}) : super(key: key);
 
@@ -33,13 +33,6 @@ class MainScreen extends StatelessWidget {
               child: const Text(AppStrings.buttonBitmask),
             ),
             const SizedBox(height: 30),
-            TextButton(
-              onPressed: () => Navigator.pushNamed(
-                context,
-                AppRouter.javaLikeEnum,
-              ),
-              child: const Text(AppStrings.buttonEnum),
-            ),
           ],
         ),
       ),

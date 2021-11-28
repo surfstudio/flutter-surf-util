@@ -9,9 +9,9 @@ Make sure that your code:
 1.	Does not contain analyzer errors
 2.	Follows a [official style](https://dart.dev/guides/language/effective-dart/style)
 3.  Follows the official [style of formatting](https://flutter.dev/docs/development/tools/formatting)
-3.	Contains no errors
-4.	New functionality is covered by tests. New functionality passes old tests
-5.	Create example that demonstrate new functionality if it is possible
+4.	Contains no errors
+5.	New functionality is covered by tests. New functionality passes old tests
+6.	Create example that demonstrate new functionality if it is possible
 
 ## Accepting the changes
 

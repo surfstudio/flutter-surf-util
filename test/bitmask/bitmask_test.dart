@@ -27,6 +27,10 @@ class TestBitmask extends Bitmask {
   const TestBitmask._(int value) : super(value);
 }
 
+class TestBitmaskNotConst extends Bitmask {
+  TestBitmaskNotConst(int value) : super(value);
+}
+
 /// binary representation
 /// 0000 0101 -> 5
 
@@ -202,6 +206,15 @@ void main() {
         Bitmask.getMask(testedData.entries.elementAt(14).value),
         equals(testedData.entries.elementAt(14).key),
       );
+    },
+  );
+
+  test(
+    'When create an instance of the TestBitmask with incorrect value,'
+    ' it should be thrown AssertionError',
+    () {
+      expect(() => TestBitmaskNotConst(16), returnsNormally);
+      expect(() => TestBitmaskNotConst(9), throwsAssertionError);
     },
   );
 
