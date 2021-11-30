@@ -9,6 +9,8 @@
 
 This package is part of the [SurfGear](https://github.com/surfstudio/SurfGear) toolkit made by [Surf](https://surf.ru).
 
+[![Surf Util](https://i.ibb.co/1bVrn7S/surf-util.png)](https://github.com/surfstudio/SurfGear)
+
 ## Description
 
 A library with set of common classes and utilities used in different modules.
@@ -17,12 +19,12 @@ A library with set of common classes and utilities used in different modules.
 
 1. [Bitmask](/lib/src/bitmask/bitmask.dart) - A generic implementation of the Bitmask type.
 
-![Bitmask](docs/images/mask.gif)
+![Bitmask](https://i.ibb.co/pLbZTQw/bitmask.gif)
 
 2. [Enum](/lib/src/enum/enum.dart) - Java-like enum.
 3. [DisableOverscroll](/lib/src/ui/widget/disable_overscroll_widget.dart) - Prevent glowing when scrolling over the edge.
 
-![Bitmask](docs/images/overscroll.gif)
+![DisableOverscroll](https://i.ibb.co/X5fh88c/overscroll.gif)
 
 ## Installation
 
