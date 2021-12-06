@@ -4,8 +4,8 @@ class AppStrings {
 
   /// OverscrollScreen
   static const overscrollAppBarTitle = 'DisableOverscroll';
-  static const overscrollTab1 = 'with';
-  static const overscrollTab2 = 'without';
+  static const overscrollTab1 = 'Overscroll disabled';
+  static const overscrollTab2 = 'Overscroll enabled';
 
   /// BitmaskScreen
   static const bitmaskAppBarTitle = 'Bitmask';
