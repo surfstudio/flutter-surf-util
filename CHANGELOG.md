@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.0.2
+
+* Internal improvements
+
 ## 1.0.1
 
 * Stable release
