@@ -28,7 +28,7 @@ class DisableOverscroll extends StatelessWidget {
   Widget build(BuildContext context) {
     return NotificationListener<OverscrollIndicatorNotification>(
       onNotification: (notification) {
-        notification.disallowGlow();
+        notification.disallowIndicator();
 
         return false;
       },
