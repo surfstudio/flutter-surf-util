@@ -1,6 +1,6 @@
 # Surf Util
 
-[![Build Status](https://shields.io/github/workflow/status/surfstudio/flutter-surf-util/build?logo=github&logoColor=white)](https://github.com/surfstudio/flutter-surf-util)
+[![Build Status](https://shields.io/github/workflow/status/surfstudio/flutter-surf-util/Analysis?logo=github&logoColor=white)](https://github.com/surfstudio/flutter-surf-util)
 [![Coverage Status](https://img.shields.io/codecov/c/github/surfstudio/flutter-surf-util?logo=codecov&logoColor=white)](https://app.codecov.io/gh/surfstudio/flutter-surf-util)
 [![Pub Version](https://img.shields.io/pub/v/surf_util?logo=dart&logoColor=white)](https://pub.dev/packages/surf_util)
 [![Pub Likes](https://badgen.net/pub/likes/surf_util)](https://pub.dev/packages/surf_util)

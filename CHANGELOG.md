@@ -1,5 +1,9 @@
 # Changelog
 
+## patch
+
+* Change usage deprecated method `disallowGlow` to `disallowIndicator`.
+
 ## 1.0.2
 
 * Internal improvements
