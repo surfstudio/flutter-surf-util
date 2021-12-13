@@ -12,7 +12,7 @@ void main() {
     home: Scaffold(
       body: NotificationListener<OverscrollIndicatorNotification>(
         onNotification: (notification) {
-            _overscrollNotification = startOverscroll;
+          _overscrollNotification = startOverscroll;
           return false;
         },
         child: DisableOverscroll(
