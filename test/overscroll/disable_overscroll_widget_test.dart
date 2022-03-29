@@ -3,7 +3,7 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:surf_util/src/ui/widget/disable_overscroll_widget.dart';
 
 void main() {
-  late String _overscrollNotification;
+  late String overscrollNotification;
 
   const startOverscroll = 'Start showing an overscroll indication';
   const emptyNotification = '';
@@ -12,7 +12,7 @@ void main() {
     home: Scaffold(
       body: NotificationListener<OverscrollIndicatorNotification>(
         onNotification: (notification) {
-          _overscrollNotification = startOverscroll;
+          overscrollNotification = startOverscroll;
           return false;
         },
         child: DisableOverscroll(
@@ -34,7 +34,7 @@ void main() {
   );
 
   setUp(() {
-    _overscrollNotification = emptyNotification;
+    overscrollNotification = emptyNotification;
   });
 
   testWidgets(
@@ -47,7 +47,7 @@ void main() {
 
       await tester.drag(singleChildScrollView, const Offset(0, 100));
       await tester.pump();
-      expect(_overscrollNotification, startOverscroll);
+      expect(overscrollNotification, startOverscroll);
     },
   );
 
@@ -61,7 +61,7 @@ void main() {
 
       await tester.drag(singleChildScrollView, const Offset(0, -200));
       await tester.pump();
-      expect(_overscrollNotification, emptyNotification);
+      expect(overscrollNotification, emptyNotification);
     },
   );
 }
